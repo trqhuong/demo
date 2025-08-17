@@ -1,0 +1,27 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+<section class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 save-date">
+
+        <div class="col">
+           <a href="/detail_event?event_id=1" class="text-decoration-none text-white">
+                <div class="card" style="background: #000000; border-radius: 0 0 15px 15px;">
+                    <img src="/static/images/1.jpg" class="card-img-top"
+                         alt="Image"
+                         style="border-top-left-radius: 0px; border-top-right-radius: 0 0 15px 15px;">
+                    <div class="card-body">
+                        <h5 class="card-title fs-4 fw-bold text-white">Tên show</h5>
+                        <p class="card-text text-success fw-bold fs-5">0 VND</p>
+                        <p class="fw-bold fs-5 text-white">
+                           <i class="far fa-calendar me-2"></i> Ngày
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

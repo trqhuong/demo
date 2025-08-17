@@ -1,0 +1,158 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+<!-- Carousel trên -->
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{ url_for('static', filename='images/1.jpg') }}" class="d-block w-50 mx-auto" alt="Ảnh 1">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='images/2.jpg') }}" class="d-block w-50 mx-auto" alt="Ảnh 2">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='images/3.jpg') }}" class="d-block w-50 mx-auto" alt="Ảnh 3">
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- Slider giữa -->
+<div class="container py-4">
+    <h2 class="mb-4 fs-5">Sự kiện đặc biệt</h2>
+    <div id="specialEventCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="/detail_event?event_id=1"><img src="{{ url_for('static', filename='images/1.jpg') }}" class="img-fluid" alt="Poster 1"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="{{ url_for('static', filename='images/2.jpg') }}" class="img-fluid" alt="Poster 2"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="{{ url_for('static', filename='images/3.jpg') }}" class="img-fluid" alt="Poster 3"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#"><img src="{{ url_for('static', filename='images/4.jpg') }}" class="img-fluid" alt="Poster 4"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="{{ url_for('static', filename='images/5.jpg') }}" class="img-fluid" alt="Poster 5"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="{{ url_for('static', filename='images/6.jpg') }}" class="img-fluid" alt="Poster 6"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#"><img src="{{ url_for('static', filename='images/7.jpg') }}" class="img-fluid" alt="Poster 7"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="{{ url_for('static', filename='images/8.jpg') }}" class="img-fluid" alt="Poster 8"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="{{ url_for('static', filename='images/6.jpg') }}" class="img-fluid" alt="Poster 9"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#specialEventCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#specialEventCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<!-- Slider dưới -->
+<div class="container py-4">
+    <h2 class="mb-4 fs-5">🔥 Sự kiện xu hướng</h2>
+    <div id="trendingEventCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="trending-item">
+                            <span class="trend-number">1</span>
+                            <a href="/event"><img src="{{ url_for('static', filename='images/1.jpg') }}" class="img-fluid rounded" alt="Sự kiện 1"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="trending-item">
+                            <span class="trend-number">2</span>
+                            <a href="#"><img src="{{ url_for('static', filename='images/8.jpg') }}" class="img-fluid rounded" alt="Sự kiện 2"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="trending-item">
+                            <span class="trend-number">3</span>
+                            <a href="#"><img src="{{ url_for('static', filename='images/2.jpg') }}" class="img-fluid rounded" alt="Sự kiện 3"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="trending-item">
+                            <span class="trend-number">4</span>
+                            <a href="#"><img src="{{ url_for('static', filename='images/4.jpg') }}" class="img-fluid rounded" alt="Sự kiện 4"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="trending-item">
+                            <span class="trend-number">5</span>
+                            <a href="#"><img src="{{ url_for('static', filename='images/5.jpg') }}" class="img-fluid rounded" alt="Sự kiện 5"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="trending-item">
+                            <span class="trend-number">6</span>
+                            <a href="#"><img src="{{ url_for('static', filename='images/6.jpg') }}" class="img-fluid rounded" alt="Sự kiện 6"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+       <button class="carousel-control-prev" type="button" data-bs-target="#trendingEventCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#trendingEventCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+
+
+{% endblock %}
